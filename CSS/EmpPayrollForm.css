@@ -18,7 +18,7 @@ body{
     flex-direction: row;
     align-items: center;
     border: 0px solid green;
-    width: 80%;
+    width: 90%;
 }
 .logo-content-img{ border: solid 0px #42515f}
 img{ height: 3em;}
@@ -30,6 +30,8 @@ img{ height: 3em;}
     color: #82A70C;
     text-transform: uppercase;
 }
+.emp-text:hover{ text-shadow: 1px 1px #42515f;}
+.emp-payroll:hover{ text-shadow: 1px 1px #82A70C;}
 .emp-payroll{ color: #42515f;}
 * { box-sizing: border-box;}
 
@@ -50,7 +52,9 @@ img{ height: 3em;}
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 8px;
     opacity: 1;
+    margin-bottom: 50px;
 }
+.form:hover{ box-shadow: 1px 1px 4px #82A70C;}
 .form-head{
     font: normal normal bold 24px/37px Roboto;
     font-family: Roboto;
@@ -60,6 +64,7 @@ img{ height: 3em;}
     opacity: 1;
     padding-bottom: 20px;
 }
+.form-head:hover{ text-shadow: 1px 1px #82A70C;}
 .row-content{
     display: flex;
     flex-direction: row;
@@ -86,7 +91,7 @@ label{
     border-radius: 4px;
     resize: vertical;
 }
-::-webkit-input-placeholder{ font-size: 16px;}
+::placeholder{font-size: 16px;}
 
 /*UC3*/
 .profile-radio-content{
@@ -106,6 +111,7 @@ label{
     border-radius: 50%;
     margin-left: 12px;
 }
+.profile:hover{ background-color: #82A70C;}
 
 /* UC5 */
 select {
@@ -117,4 +123,100 @@ select {
     letter-spacing: 0px;
     color: #42515f;
     background-color: transparent;
+  }
+
+  /* UC6 */
+.buttonParent {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .button {
+    border-radius: 4px;
+    background-color: rgb(63, 63, 63);
+    border: none;
+    color: #FFFFFF ;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .submitButton {
+    border: none;
+    background-color: rgb(50, 123, 192);
+    margin-right: 30px;
+  }
+  .submitButton:hover{ 
+    color: black;
+ }
+  .cancelButton {
+    margin-left: 10px;
+    text-decoration: none;
+    text-align: center;
+    background-color: rgb(241, 66, 66);
+    font-family: Roboto;
+  }
+  .cancelButton:hover{ 
+    color: black;
+}
+  .resetButton:hover{ 
+    color: black;
+    background-color: #42515f;
+}
+.label:hover{
+    color: black;
+}
+
+/*UC6 - Media querry*/
+ @media only screen and(max-width:900px) {
+    .form{
+        width: 85%;
+        padding: 20px 20px;
+    }
+    .cancelButton{
+        margin-left: 0px;
+    }
+} 
+
+@media only screen and (max-width: 650px) {
+    .form {
+        margin-top: 10px;
+        width: 90%;
+      }
+      .row {
+        flex-direction: column;
+      }
+    .row-content {
+        display: block;
+        margin-bottom: 10px;
+        align-items: center;
+    }
+    .profile-radio-button {
+        flex-flow: wrap;
+      }
+    .profile 
+    {
+    width: 30px;
+    height: 30px;
+    margin-left: 12px;
+    }
+
+    .submit-reset {
+      width: 100%;
+      display: flex;
+      flex-grow: 1;
+      flex-direction: row;
+      justify-content:end;
+      margin-bottom: 20px;
+    }
+    .buttonParent {
+      align-items: flex-start;
+    }
+    .cancelButton {
+        margin-left: 0px;
+    }
   }
