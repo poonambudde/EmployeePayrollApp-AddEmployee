@@ -1,3 +1,4 @@
+<!-- UC1: Employee payroll app with logo -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap">
     <link rel="stylesheet" href="../CSS/EmpPayrollForm.css">
 </head>
+
 <body>
     <header class="header-content header">
         <div class="logo-content">
@@ -18,6 +20,8 @@
             </div>
         </div>
     </header>
+
+<!-- UC2: Specify Form header and name -->
     <div class="form-content">
         <form class="form" action="#" onsubmit="save(event);">
             <div class="form-head">Employee Payroll Form</div>
@@ -25,26 +29,62 @@
                 <label class="label text" for="name">Name</label>
                 <input class="input" type="text" name="name" id="name" placeholder="Your Name" required>
             </div>
+
+<!-- UC3: Specify Profile Pic -->
             <div class="row-content">
                 <label class="label text" for="profile">Profile Image</label>
                 <div class="profile-radio-content">
                     <label>
-                        <input type="radio" name="profile" id="profile1" required>
+                        <input type="radio" name="profile" id="profile1" value="../Assets/Profile Images/Ellipse -1.png" required>
                         <img class="profile" id="image1" src="../Assets/Profile Images/Ellipse -1.png">
                     </label>
                     <label>
-                        <input type="radio" name="profile" id="profile2">
+                        <input type="radio" name="profile" id="profile2" value="../Assets/Profile Images/Ellipse -2.png" required>
                         <img class="profile" id="image2" src="../Assets/Profile Images/Ellipse -2.png">
                     </label>
                     <label>
-                        <input type="radio" name="profile" id="profile3" required>
+                        <input type="radio" name="profile" id="profile3" value="../Assets/Profile Images/Ellipse -3.png" required>
                         <img class="profile" id="image3" src="../Assets/Profile Images/Ellipse -3.png">
                     </label>
                     <label>
-                        <input type="radio" name="profile" id="profile4" required>
+                        <input type="radio" name="profile" id="profile4" value="../Assets/Profile Images/Ellipse -4.png" required>
                         <img class="profile" id="image4" src="../Assets/Profile Images/Ellipse -4.png">
                     </label>
                 </div>
+            </div>
+
+<!-- UC4: Specify Gender ,department, Salary -->
+            <div class="row-content">
+                <label class="label text" for="gender">Gender</label>
+                <div>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label class="text" for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label class="text" for="female">Female</label>
+                </div>
+            </div>
+
+            <div class="row-content">
+                <label class="label text" for="department">Department</label>
+                <div>
+                    <input class="checkbox" type="checkbox" id="hr" name="hr" value="HR">
+                    <label class="text" for="hr">HR</label>
+                    <input class="checkbox" type="checkbox" id="sales" name="sales" value="Sales">
+                    <label class="text" for="sales">Sales</label>
+                    <input class="checkbox" type="checkbox" id="finance" name="finance" value="Finance">
+                    <label class="text" for="finance">Finance</label>
+                    <input class="checkbox" type="checkbox" id="engineer" name="engineer" value="Engineer">
+                    <label class="text" for="engineer">Engineer</label>
+                    <input class="checkbox" type="checkbox" id="others" name="others" value="Others">
+                    <label class="text" for="others">Others</label>
+                </div>
+            </div>
+            
+            <div class="row-content">
+                <label class="label text" for="salary">Choose your Salary: </label>
+                <input class="input" type="range" id="salary" name="salary" min="300000" 
+                       max="500000" step="100" value="400000">
+                <output class="salary-output text" for="salary">400000</output>
             </div>
         </form>
     </div>
