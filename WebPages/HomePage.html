@@ -4,9 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/HomePage.css">
     <title>Emp Payroll HomePage</title>
 </head>
 <body>
-    <h1>Home Page</h1>
+    <header class="header-content header">
+        <div class="logo-content">
+            <img class="logo-content-img" src="../Assets/Images/logo.png" alt="logo">
+            <div>
+                <span class="emp-text">employee</span><br>
+                <span class="emp-text emp-payroll">payroll</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="main_Container">
+        <div class="header_container">
+            <span class="header_text">
+                Employee Details<span class="emp_count" id="emp_count">10</span>
+            </span>
+            <a href="../WebPages/EmpPayrollForm.html" class="add_button">
+                <img src="../Assets/Icons/add-24px.svg" class="icons" />
+                <span class="add">Add Employee</span>
+            </a>
+        </div>
+        <table id="table-display" class="table">
+        </table>
+    </div>
+    <script src="../JS/HomePage.js"></script>
 </body>
 </html>
